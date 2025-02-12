@@ -1,0 +1,303 @@
+﻿<Window x:Class="EjInterfacesJoseCarlos.VentanaMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="VentanaMenu" Height="450" Width="800" WindowStyle="None" Background="#242424">
+
+    <Grid>
+        <!-- Sidebar -->
+        <Border Width="192" Background="#5DB85B" HorizontalAlignment="Left" CornerRadius="10,0,0,10"/>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="200" Height="Auto" Margin="10,10,0,0">
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,20">
+                <TextBlock Text="NORTHWIND" FontSize="18" FontWeight="Bold" Foreground="#242424" FontFamily="Inter"/>
+                <Image Source="Assets/bbdd.png" Width="36" Height="30"/>
+            </StackPanel>
+
+            <Button Background="Transparent" Foreground="#242424" FontSize="16" FontWeight="Bold" FontFamily="Inter"
+        Padding="10" Width="133" Height="44" BorderThickness="0" Click="BtnInicio_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="Assets/Vector.png" Width="20" Height="20" Margin="0,0,10,0" RenderTransformOrigin="-0.831,0.62"/>
+                    <TextBlock Text="INICIO" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" Foreground="#242424" FontSize="16" FontWeight="Bold" FontFamily="Inter"
+        Padding="10" Width="144" Height="44" BorderThickness="0" Click="BtnAgregar_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="Assets/botonmas.png" Width="20" Height="20" Margin="0,0,10,0"/>
+                    <TextBlock Text="AGREGAR" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+
+            <Button Background="Transparent" Foreground="#242424" FontSize="16" FontWeight="Bold" FontFamily="Inter"
+        Padding="10" Width="150" Height="44" BorderThickness="0" Click="BtnModificar_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="Assets/lapiz.png" Width="20" Height="20" Margin="0,0,10,0"/>
+                    <TextBlock Text="MODIFICAR" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" Foreground="#242424" FontSize="16" FontWeight="Bold" FontFamily="Inter"
+        Padding="10" Width="144" Height="44" BorderThickness="0" Click="BtnBorrar_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="Assets/basura.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                    <TextBlock Text="BORRAR" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+
+        <Button Background="Transparent" Foreground="#242424" FontSize="16" FontFamily="Inter" 
+        Padding="10" Width="70" Height="43" BorderThickness="0" HorizontalAlignment="Left" 
+        VerticalAlignment="Bottom" Margin="0,0,0,0" Click="BtnClose_Click">
+            <Image Source="Assets/salir.png" Width="20" Height="20"/>
+        </Button>
+
+        <StackPanel x:Name="InicioPanel" Orientation="Vertical" HorizontalAlignment="Left" Margin="240,40,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="🏠" FontSize="18" Foreground="#5DB85B" Margin="0,0,25,0"/>
+                <TextBlock Text="INICIO" FontSize="12" FontWeight="Bold" Foreground="#5DB85B"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,20,0,0" Width="500">
+                <TextBlock Text="PRODUCTOS" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" Width="242" TextAlignment="Center" FontFamily="Inter"/>
+                <TextBlock Text="CATEGORÍA" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" Width="250" TextAlignment="Center" FontFamily="Inter"/>
+            </StackPanel>
+
+            <!-- Contenedor de DataGrids alineados horizontalmente sin separación -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <!-- DataGrid para Productos -->
+                <StackPanel Orientation="Vertical">
+                    <DataGrid x:Name="ProductosDataGrid" Width="242" Height="250" 
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+
+                <!-- DataGrid para Categorías pegado a Productos -->
+                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                    <DataGrid x:Name="CategoriasDataGrid" Width="250" Height="250" 
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+        <!-- Agregar panel-->
+
+        <StackPanel x:Name="AgregarPanel" Visibility="Collapsed" Orientation="Vertical" HorizontalAlignment="Left" Margin="220,20,0,0">
+            <!-- Encabezado Agregar -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,15,0,10">
+                <TextBlock Text="➕" FontSize="20" Foreground="#5DB85B" Margin="32,0,5,0"/>
+                <TextBlock Text="AGREGAR" FontSize="12" FontWeight="Bold" Foreground="#5DB85B" FontFamily="Inter"/>
+            </StackPanel>
+
+            <!-- Campo Producto -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <TextBlock Text="Producto" FontSize="13" FontWeight="Bold" Foreground="#5DB85B" Margin="65,10,0,0"/>
+                <TextBox x:Name="ProductoTextBox" Width="250" Height="25" Background="#242424" Foreground="White" 
+                 BorderBrush="Transparent" BorderThickness="0" Margin="65,5,0,0" Padding="5,0,0,0" TextAlignment="Left"/>
+                <Border BorderBrush="#777777" BorderThickness="0,0,0,1" Width="250" Height="1" Margin="65,0,0,10"/>
+            </StackPanel>
+
+            <!-- Campo Categoría y Botón Agregar en la misma línea -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Categoría" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" Margin="65,15,0,0"/>
+                    <ComboBox x:Name="CategoriasComboBox" Width="110" Height="20" Background="#5DB85B" Foreground="Black" 
+                      FontSize="14" FontFamily="Inter" Margin="65,5,0,0"/>
+                </StackPanel>
+
+                <!-- Botón Agregar -->
+                <Button Content="Agregar" Style="{StaticResource BotonEstilo}" Click="BtnAgregarProducto_Click"/>
+            </StackPanel>
+
+            <!-- Tablas de Productos y Categoría -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="30,20,0,0">
+                <!-- Tabla de Productos -->
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="PRODUCTOS" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" TextAlignment="Center" Width="242"/>
+                    <DataGrid x:Name="AgregarProductosDataGrid" Width="242" Height="250"
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+
+                <!-- Tabla de Categorías (Pega las tablas sin margen) -->
+                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                    <TextBlock Text="CATEGORÍAS" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" TextAlignment="Center" Width="250"/>
+                    <DataGrid x:Name="AgregarCategoriasDataGrid" Width="250" Height="250"
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+            </StackPanel>
+            </StackPanel>
+
+
+
+
+
+
+            <!-- Pantalla de Modificar -->
+
+        <StackPanel x:Name="ModificarPanel" Visibility="Collapsed" Orientation="Vertical" HorizontalAlignment="Left" Margin="220,20,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,15,0,10">
+                <TextBlock Text="✏️" FontSize="20" Foreground="#5DB85B" Margin="32,0,5,0"/>
+                <TextBlock Text="MODIFICAR" FontSize="12" FontWeight="Bold" Foreground="#5DB85B" FontFamily="Inter"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Producto antiguo" FontSize="13" FontWeight="Bold" Foreground="#5DB85B" Margin="65,10,0,0"/>
+                    <TextBox x:Name="ProductoAntiguoTextBox" Width="200" Height="25" Background="#242424" Foreground="White"
+                     BorderBrush="Transparent" BorderThickness="0" Margin="65,5,0,0"/>
+                    <Border BorderBrush="#777777" BorderThickness="0,0,0,1" Width="170" Height="1" Margin="35,0,0,10"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Producto nuevo" FontSize="13" FontWeight="Bold" Foreground="#5DB85B" Margin="65,10,0,0"/>
+                    <TextBox x:Name="ProductoNuevoTextBox" Width="200" Height="25" Background="#242424" Foreground="White"
+                     BorderBrush="Transparent" BorderThickness="0" Margin="65,5,0,0"/>
+                    <Border BorderBrush="#777777" BorderThickness="0,0,0,1" Width="170" Height="1" Margin="35,0,0,10"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Categoría" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" Margin="65,15,0,0"/>
+                    <ComboBox x:Name="ModificarCategoriasComboBox" Width="110" Height="20" 
+                      Background="#5DB85B" Foreground="Black" FontSize="14" 
+                      FontFamily="Inter" Margin="65,5,0,0"/>
+                </StackPanel>
+
+                <!-- Botón Modificar -->
+                <Button Content="Modificar" Style="{StaticResource BotonEstilo}"
+                Click="ButonModificar_Click"/>
+            </StackPanel>
+
+            <!-- DataGrid de Productos y Categorías juntos -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="30,20,0,0">
+                <!-- Tabla de Productos -->
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="PRODUCTOS" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" TextAlignment="Center" Width="242"/>
+                    <DataGrid x:Name="ModificarProductosDataGrid" Width="242" Height="250"
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+
+                <!-- Tabla de Categorías pegada a Productos -->
+                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                    <TextBlock Text="CATEGORÍAS" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" TextAlignment="Center" Width="250"/>
+                    <DataGrid x:Name="ModificarCategoriasDataGrid" Width="250" Height="250"
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+        <!-- Borrar pantalla -->
+
+        <StackPanel x:Name="BorrarPanel" Visibility="Collapsed" Orientation="Vertical" HorizontalAlignment="Left" Margin="220,20,0,0">
+            <!-- Encabezado Borrar -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,15,0,10">
+                <TextBlock Text="🗑️" FontSize="20" Foreground="#5DB85B" Margin="32,0,5,0"/>
+                <TextBlock Text="BORRAR" FontSize="12" FontWeight="Bold" Foreground="#5DB85B" FontFamily="Inter"/>
+            </StackPanel>
+
+            <!-- Campo Producto -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <TextBlock Text="Producto" FontSize="13" FontWeight="Bold" Foreground="#5DB85B" Margin="65,10,0,0"/>
+                <TextBox x:Name="ProductoBorrarTextBox" Width="250" Height="25" Background="#242424" Foreground="White" 
+                 BorderBrush="Transparent" BorderThickness="0" Margin="65,5,0,0" Padding="5,0,0,0" TextAlignment="Left"/>
+                <Border BorderBrush="#777777" BorderThickness="0,0,0,1" Width="200" Height="1" Margin="15,0,0,10"/>
+            </StackPanel>
+
+            <!-- Botón Borrar -->
+            <Button Content="Borrar" Style="{StaticResource BotonEstilo}" Margin="345,-35,0,0" 
+            Click="BtnBorrarProducto_Click"/>
+
+            <!-- Contenedor de DataGrids alineados horizontalmente -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="30,70,0,0">
+                <!-- Sección Productos -->
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="PRODUCTOS" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" TextAlignment="Center" Width="242"/>
+                    <DataGrid x:Name="ProductosBorrarDataGrid" Width="242" Height="250" 
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+
+                <!-- Sección Categorías pegada a Productos -->
+                <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                    <TextBlock Text="CATEGORÍA" FontSize="14" FontWeight="Bold" Foreground="#5DB85B" TextAlignment="Center" Width="250"/>
+                    <DataGrid x:Name="CategoriasBorrarDataGrid" Width="250" Height="250" 
+                      AutoGenerateColumns="True" Background="#242424"
+                      Foreground="White" BorderBrush="#5DB85B" BorderThickness="1"
+                      IsReadOnly="True" CanUserAddRows="False"
+                      ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}"
+                      GridLinesVisibility="All"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#1E1E1E"
+                      RowBackground="#242424"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
+        <!-- Botones de minimizar y cerrar -->
+        <Border Width="19" Height="19" Background="#5DB85B" CornerRadius="15"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,40,0">
+            <Button Content="-" Background="Transparent" Foreground="Black" FontSize="16" Width="30" Height="30"
+                BorderThickness="0" Click="BtnMinimize_Click" Margin="-6,-7,-5,-4"/>
+        </Border>
+        <Border Width="19" Height="19" Background="#5DB85B" CornerRadius="15"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0">
+            <Button Content="X" Background="Transparent" Foreground="Black" FontSize="14" Width="30" Height="30"
+                            BorderThickness="0" Click="BtnClose_Click" RenderTransformOrigin="0.25,0.477" Margin="-6,-6,-5,-5"/>
+        </Border>
+
+    </Grid>
+</Window>

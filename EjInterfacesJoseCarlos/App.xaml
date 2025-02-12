@@ -1,0 +1,56 @@
+﻿<Application x:Class="EjInterfacesJoseCarlos.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EjInterfacesJoseCarlos"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Estilo para los encabezados de los DataGrid -->
+        <Style x:Key="DataGridHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#5DB85B"/>
+            <!-- Verde -->
+            <Setter Property="Foreground" Value="#242424"/>
+            <!-- Negro oscuro -->
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Estilo común para TODOS los botones -->
+        <Style x:Key="BotonEstilo" TargetType="Button">
+            <Setter Property="Background" Value="#5DB85B"/>
+            <!-- Verde -->
+            <Setter Property="Foreground" Value="#242424"/>
+            <!-- Negro oscuro -->
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="165,30,0,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+
+            <!-- Template personalizado con BorderRadius -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                            CornerRadius="3" 
+                            BorderBrush="#5DB85B" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <!-- Efecto Hover -->
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#4CAF50"/>
+                    <!-- Verde más oscuro -->
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>

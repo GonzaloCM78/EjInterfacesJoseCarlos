@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj",
+        "projectName": "EjInterfacesJoseCarlos",
+        "projectPath": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj",
+        "packagesPath": "C:\\Users\\Gonzalo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gonzalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

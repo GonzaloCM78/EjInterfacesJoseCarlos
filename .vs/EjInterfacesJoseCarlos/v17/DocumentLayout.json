@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|c:\\users\\gonzalo\\source\\repos\\ejinterfacesjosecarlos\\ejinterfacesjosecarlos\\ventanamenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|solutionrelative:ejinterfacesjosecarlos\\ventanamenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|c:\\users\\gonzalo\\source\\repos\\ejinterfacesjosecarlos\\ejinterfacesjosecarlos\\ventanamenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|solutionrelative:ejinterfacesjosecarlos\\ventanamenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|c:\\users\\gonzalo\\source\\repos\\ejinterfacesjosecarlos\\ejinterfacesjosecarlos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|solutionrelative:ejinterfacesjosecarlos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|c:\\users\\gonzalo\\source\\repos\\ejinterfacesjosecarlos\\ejinterfacesjosecarlos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|solutionrelative:ejinterfacesjosecarlos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|c:\\users\\gonzalo\\source\\repos\\ejinterfacesjosecarlos\\ejinterfacesjosecarlos\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|solutionrelative:ejinterfacesjosecarlos\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|c:\\users\\gonzalo\\source\\repos\\ejinterfacesjosecarlos\\ejinterfacesjosecarlos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A075CC0-BD7D-4047-92F6-31F0BC736D6D}|EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos.csproj|solutionrelative:ejinterfacesjosecarlos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\App.xaml",
+              "RelativeDocumentMoniker": "EjInterfacesJoseCarlos\\App.xaml",
+              "ToolTip": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\App.xaml",
+              "RelativeToolTip": "EjInterfacesJoseCarlos\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-04T17:44:34.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "EjInterfacesJoseCarlos\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\MainWindow.xaml",
+              "RelativeToolTip": "EjInterfacesJoseCarlos\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-29T18:53:06.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EjInterfacesJoseCarlos\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\MainWindow.xaml.cs",
+              "RelativeToolTip": "EjInterfacesJoseCarlos\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T18:53:06.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VentanaMenu.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\VentanaMenu.xaml.cs",
+              "RelativeDocumentMoniker": "EjInterfacesJoseCarlos\\VentanaMenu.xaml.cs",
+              "ToolTip": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\VentanaMenu.xaml.cs",
+              "RelativeToolTip": "EjInterfacesJoseCarlos\\VentanaMenu.xaml.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAswPUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T16:44:57.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\Database.cs",
+              "RelativeDocumentMoniker": "EjInterfacesJoseCarlos\\Database.cs",
+              "ToolTip": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\Database.cs",
+              "RelativeToolTip": "EjInterfacesJoseCarlos\\Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T17:57:02.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VentanaMenu.xaml",
+              "DocumentMoniker": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\VentanaMenu.xaml",
+              "RelativeDocumentMoniker": "EjInterfacesJoseCarlos\\VentanaMenu.xaml",
+              "ToolTip": "C:\\Users\\Gonzalo\\source\\repos\\EjInterfacesJoseCarlos\\EjInterfacesJoseCarlos\\VentanaMenu.xaml",
+              "RelativeToolTip": "EjInterfacesJoseCarlos\\VentanaMenu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-30T16:41:27.187Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+﻿<Window x:Class="EjInterfacesJoseCarlos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression.blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EjInterfacesJoseCarlos"
+        mc:Ignorable="d"
+        Title="Northwind Login" Height="450" Width="800" WindowStyle="None" Background="#242424">
+
+    <Grid>
+        <TextBlock Text="NORTHWIND" FontSize="64" FontWeight="Bold" Foreground="#5DB85B" FontFamily="Inter"
+                   Width="411" Height="77" LineHeight="77.45"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="139,80,0,0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#5DB85B" BlurRadius="20" ShadowDepth="0" Opacity="2"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <Image Source="Assets/bbdd.png" Width="78px" HorizontalAlignment="Right" Margin="0,-53,150,184">
+            <Image.Effect>
+                <DropShadowEffect Color="#0000" BlurRadius="15" ShadowDepth="0" Opacity="2"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Botones de minimizar y cerrar -->
+        <Border Width="19" Height="19" Background="#5DB85B" CornerRadius="15"
+                HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,40,0">
+            <Button Content="-" Background="Transparent" Foreground="Black" FontSize="16" Width="30" Height="30" BorderThickness="0" Click="BtnMinimize_Click" Margin="-6,-7,-5,-4"/>
+        </Border>
+        <Border Width="19" Height="19" Background="#5DB85B" CornerRadius="15"
+                HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0">
+            <Button Content="X" Background="Transparent" Foreground="Black" FontSize="14" Width="30" Height="30" BorderThickness="0" Click="BtnClose_Click" RenderTransformOrigin="0.25,0.477" Margin="-6,-6,-5,-5"/>
+        </Border>
+
+        <TextBlock Text="Usuario" Foreground="#5DB85B" FontSize="16" FontWeight="SemiBold" FontFamily="Inter" Margin="254,199,0,70" HorizontalAlignment="Left"/>
+        <StackPanel Margin="250,220,276,0" VerticalAlignment="Top">
+            <TextBox Name="txtUsuario" Height="30" Background="#242424" Foreground="White" BorderThickness="0" TextChanged="txtUsuario_TextChanged"/>
+            <Rectangle Height="1" Width="300" Fill="Gray" Margin="0,2,0,0"/>
+        </StackPanel>
+
+        <TextBlock Text="Contraseña" Foreground="#5DB85B" FontSize="16" FontWeight="SemiBold" FontFamily="Inter" Margin="254,272,0,50" HorizontalAlignment="Left"/>
+        <StackPanel Margin="250,292,276,0" VerticalAlignment="Top">
+            <PasswordBox Name="txtPassword" Height="30" Background="#242424" Foreground="White" BorderThickness="0"/>
+            <Rectangle Height="1" Width="300" Fill="Gray" Margin="0,2,0,0"/>
+        </StackPanel>
+
+        <Border Width="139" Height="35" Background="#5DB85B" CornerRadius="9"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
+            <Button Content="Entrar" Background="Transparent" Foreground="Black" FontWeight="Bold"
+                    Width="120" Height="40" BorderThickness="0" Click="BtnLogin_Click" Margin="10,-2,9,-3"/>
+        </Border>
+    </Grid>
+</Window>
+
+
+
+
+
+
+
